@@ -1,0 +1,93 @@
+:root {
+    --gray-800: #FFFFE0;
+    --green-500:#1C1C1C;
+}
+* {
+    border: 0;
+    box-sizing: content-box;
+    font-family: 'Antonio', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    align-items: center;
+    background:linear-gradient(250deg , #008000, #FFFF00);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    
+}
+
+.copa .copa2{
+    background-repeat: no-repeat;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+   
+}
+
+  
+#count-down {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 50px;
+}
+
+/* aqui foi feito os quadros de cada hora */ 
+#count-down li {
+    background-color: var(--gray-800);
+    border-radius: 15px;
+    color: var(--green-500);
+    font-size: 32px;
+    font-weight: bold;
+    height: 45px;
+    padding: 8px 12px;
+    position: relative;
+    text-align: center;
+    width: 35px;
+    
+}
+
+#count-down li:before,
+#count-down li:after {
+    position: absolute;
+}
+
+/* fizemos os dois pontos do relogio*/ 
+#count-down li:not(:last-child):before {
+    content: ":";
+    font-size: 24px;
+    right: -15px;
+    top: 15px;
+}
+
+#count-down li:after {
+    bottom: -16px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    justify-content: center;
+    width: calc(100% - 22px);
+}
+
+/* os nomes em baixo de cada quadradinho*/ 
+#count-down li.days:after {
+    content: "dias";
+}
+#count-down li.hours:after {
+    content: "horas";
+}
+
+#count-down li.minutes:after {
+    content: "minutos";
+}
+
+#count-down li.seconds:after {
+    content: "segundos";
+}
+
